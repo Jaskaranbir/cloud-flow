@@ -1,0 +1,54 @@
+// IDEs might warn of unknown-properties here,
+// but properties are Cytoscape-specific and
+// valid. Hence, such IDE warnings are ignorable.
+// ---
+// For more info on styling techniques:
+// https://js.cytoscape.org/#selectors
+// https://js.cytoscape.org/#style
+
+node {
+  shape: roundrectangle;
+  color: black;
+  background-color: white;
+  overlay-opacity: 0;
+}
+
+edge {
+  // curve-style: "straight";
+  width: 2;
+  line-color: black;
+}
+
+.eh-handle {
+  background-color: white;
+  width: 15;
+  height: 15;
+  shape: ellipse;
+  // border-color: "black";
+  overlay-opacity: 0;
+  border-width: 2;
+  border-opacity: 1;
+}
+
+.eh-source {
+  border-width: 3;
+  border-color: black;
+}
+
+
+.eh-target {
+  border-width: 3;
+  border-color: black;
+  opacity: 1;
+}
+
+
+.eh-preview, .eh-ghost-edge {
+  line-color: black;
+  target-arrow-color: black;
+  source-arrow-color: black
+}
+
+.eh-preview {
+  opacity: 0.3
+}

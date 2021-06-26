@@ -1,0 +1,48 @@
+#container {
+  display: flex;
+  flex: auto;
+  align-items: stretch;
+  margin: 1px;
+  padding: 10px;
+  box-sizing: border-box;
+  user-select: none;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-radius: 8px;
+
+  &:hover {
+    border-width: 3px;
+  }
+}
+
+#bp-icon {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgb(172, 172, 172);
+  padding-right: 5px;
+}
+
+#bp-info {
+  align-self: baseline;
+  margin: 10px 10px 10px 5px;
+}
+
+#bp-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#bp-type {
+  font-size: 14px;
+}
+
+#settings-icon {
+  align-self: start;
+  margin: -10px 0 0 15px;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+  }
+}

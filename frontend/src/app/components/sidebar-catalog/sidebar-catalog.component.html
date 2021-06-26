@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      position="end"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Blueprints Catalog</mat-toolbar>
+
+    <mat-nav-list>
+      <div
+        mat-list-item
+        *ngFor="let bp of bpCatalog"
+        (drop)="dropBp($event)" 
+        (dragover)="allowDropBp($event)"
+        (dragstart)="dragBp($event, bp)"
+        class="bp-container"
+        draggable="true">
+        <app-node
+          [borderSize]="1"
+          [fitContainerToParent]="true"
+          [enableSettingsIcon]="false"
+          [blueprint]="bp"></app-node>
+      </div>
+    </mat-nav-list>
+
+    <div
+      id="nav-collapse-btn"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()">
+      <span>Collapse sidebar</span>
+      <mat-icon aria-label="Side nav toggle icon">arrow_forward_ios</mat-icon>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>
+<div
+  id="nav-expand-btn"
+  aria-label="Toggle sidenav"
+  mat-icon-button
+  (click)="drawer.toggle()">
+  <mat-icon aria-label="Side nav toggle icon">arrow_back_ios</mat-icon>
+</div>

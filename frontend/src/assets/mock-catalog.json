@@ -1,0 +1,19 @@
+{
+  "be776fcf-19d4-49c1-9685-b53fe7df1aa6": {
+    "name": "Angular",
+    "type": "Frontend",
+    "icon": "assets/icons/angular.svg"
+  },
+
+  "acbbad8c-1a32-47f0-a46f-65b06b1b66cf": {
+    "name": "Go",
+    "type": "Backend",
+    "icon": "assets/icons/golang.svg"
+  },
+
+  "e9b3a2fc-62a9-4ff7-ac0a-784316c088b5": {
+    "name": "SQL-Server",
+    "type": "Database",
+    "icon": "assets/icons/sql-server.svg"
+  }
+}

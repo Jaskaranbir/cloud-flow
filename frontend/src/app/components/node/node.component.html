@@ -1,0 +1,28 @@
+<div id="container"
+  [style.borderWidth.px]="borderSize"
+  [style.width.px]="fitContainerToParent ? '' : width"
+  [style.height.px]="fitContainerToParent ? '' : height"
+  [style.width.%]="fitContainerToParent ? '99' : ''"
+  [style.height.%]="fitContainerToParent ? '100' : ''">
+
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <div id="bp-icon">
+    <img
+      [src]="blueprint.icon"
+      [style.width.px]="width / 2.7"
+      draggable="false" />
+    </div>
+
+    <div id="bp-info">
+      <div id="bp-name" [textContent]="blueprint.name"></div>
+      <div id="bp-type" [textContent]="blueprint.type"></div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="enableSettingsIcon"
+    id="settings-icon"
+    (click)="onSettingsClicked()">
+    <img src="assets/icons/node/settings.svg" />
+  </div>
+</div>
